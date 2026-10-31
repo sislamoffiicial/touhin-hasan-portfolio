@@ -1,0 +1,121 @@
+/* =========================================================
+   PRESS PAGE
+
+   Contains only Press-specific styles.
+   Shared layout/sidebar/mobile navigation are defined
+   elsewhere.
+   ========================================================= */
+
+/* =========================================================
+   MAIN CONTENT
+   ========================================================= */
+
+.press-main {
+    padding: 110px 72px 80px;
+}
+
+/* =========================================================
+   PRESS LIST
+   ========================================================= */
+
+.press-list {
+    display: flex;
+    flex-direction: column;
+    gap: 90px;
+}
+
+.press-item {
+    width: 100%;
+}
+
+/* =========================================================
+   PRESS IMAGE
+   ========================================================= */
+
+.press-image {
+    width: 100%;
+    margin-bottom: 28px;
+}
+
+.press-image img {
+    display: block;
+    width: 100%;
+    height: auto;
+
+    object-fit: contain;
+}
+
+/* =========================================================
+   PRESS COPY
+   ========================================================= */
+
+.press-text {
+    margin-bottom: 24px;
+
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 1.6;
+
+    color: var(--color-text);
+}
+
+/* =========================================================
+   PUBLICATION / YEAR
+   ========================================================= */
+
+.press-meta p {
+    margin: 0;
+
+    font-size: 13px;
+    font-weight: 300;
+    line-height: 1.4;
+
+    color: var(--color-text);
+}
+
+.press-meta strong {
+    font-weight: 500;
+}
+
+/* =========================================================
+   SEPARATOR
+   ========================================================= */
+
+.press-separator {
+    width: 100%;
+    height: 1px;
+
+    margin-top: 52px;
+
+    background: var(--color-border);
+}
+
+/* =========================================================
+   MOBILE / TABLET
+   ========================================================= */
+
+@media (max-width: 1023px) {
+    .press-main {
+        padding-top: var(--mobile-page-top);
+        padding-bottom: 60px;
+    }
+
+    .press-list {
+        gap: 72px;
+    }
+
+    .press-image {
+        width: 100%;
+        max-width: none;
+
+        margin-bottom: 24px;
+    }
+
+    .press-text {
+        width: 100%;
+    }
+
+    .press-separator {
+        margin-top: 44px;
+    }
+}

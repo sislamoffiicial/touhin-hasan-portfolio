@@ -1,0 +1,65 @@
+/* =========================================================
+   TOUHIN HASAN PORTFOLIO
+   Main CSS entry point
+   ========================================================= */
+
+/* =========================================================
+   FONTS
+   ========================================================= */
+
+@import "@fontsource/barlow/100.css";
+@import "@fontsource/barlow/300.css";
+@import "@fontsource/barlow/400.css";
+@import "@fontsource/barlow/500.css";
+@import "@fontsource/barlow/700.css";
+
+/* =========================================================
+   TAILWIND
+   ========================================================= */
+
+@import "tailwindcss";
+
+/* =========================================================
+   CORE
+   ========================================================= */
+
+@import "./core/variables.css";
+@import "./core/base.css";
+@import "./core/layout.css";
+
+/* =========================================================
+   SHARED COMPONENTS
+   ========================================================= */
+
+@import "./components/desktop-sidebar.css";
+@import "./components/mobile-menu.css";
+@import "./components/page-title.css";
+
+/* =========================================================
+   PAGE STYLES
+   ========================================================= */
+
+@import "./pages/home.css";
+@import "./pages/gallery.css";
+@import "./pages/about.css";
+@import "./pages/press.css";
+@import "./pages/reviews.css";
+@import "./pages/awards.css";
+@import "./pages/contact.css";
+
+/* =========================================================
+   TAILWIND SOURCES
+   ========================================================= */
+
+@source "../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php";
+@source "../../storage/framework/views/*.php";
+
+/* =========================================================
+   TAILWIND THEME
+   ========================================================= */
+
+@theme {
+    --font-sans:
+        "Barlow", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
+        "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}

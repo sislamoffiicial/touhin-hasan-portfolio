@@ -1,0 +1,129 @@
+/* =========================================================
+   REVIEWS PAGE
+
+   Contains only Review-specific styles.
+   Shared layout/sidebar/mobile navigation are defined
+   elsewhere.
+   ========================================================= */
+
+/* =========================================================
+   MAIN CONTENT
+   ========================================================= */
+
+.reviews-main {
+    padding: 110px 72px 80px;
+}
+
+/* =========================================================
+   REVIEW LIST
+   ========================================================= */
+
+.reviews-list {
+    display: flex;
+    flex-direction: column;
+    gap: 90px;
+}
+
+.review-item {
+    width: 100%;
+}
+
+/* =========================================================
+   REVIEWER IMAGE
+   ========================================================= */
+
+.reviewer-image {
+    width: 110px;
+    height: 110px;
+
+    margin-bottom: 28px;
+
+    overflow: hidden;
+}
+
+.reviewer-image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+/* =========================================================
+   REVIEW TEXT
+   ========================================================= */
+
+.review-text {
+    margin-bottom: 24px;
+
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 1.6;
+
+    color: var(--color-text);
+}
+
+/* =========================================================
+   REVIEWER META
+   ========================================================= */
+
+.reviewer-meta {
+    margin-bottom: 0;
+}
+
+.reviewer-meta h2 {
+    margin: 0 0 4px;
+
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.2;
+
+    color: var(--color-text);
+}
+
+.reviewer-meta p {
+    margin: 0;
+
+    font-size: 13px;
+    font-weight: 300;
+    line-height: 1.45;
+
+    color: var(--color-text);
+}
+
+/* =========================================================
+   SEPARATOR
+   ========================================================= */
+
+.review-separator {
+    width: 100%;
+    height: 1px;
+
+    margin-top: 52px;
+
+    background: var(--color-border);
+}
+
+/* =========================================================
+   MOBILE / TABLET
+   ========================================================= */
+
+@media (max-width: 1023px) {
+    .reviews-main {
+        padding-top: var(--mobile-page-top);
+        padding-bottom: 60px;
+    }
+
+    .reviews-list {
+        gap: 72px;
+    }
+
+    .reviewer-image {
+        width: 110px;
+        height: 110px;
+    }
+
+    .review-text {
+        width: 100%;
+    }
+}

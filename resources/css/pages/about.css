@@ -1,0 +1,212 @@
+/* =========================================================
+   ABOUT PAGE
+
+   Contains only About-specific styles.
+   Shared layout/sidebar/mobile navigation are defined
+   elsewhere.
+   ========================================================= */
+
+/* =========================================================
+   MAIN CONTENT
+   ========================================================= */
+
+.about-main {
+    padding: 48px 44px 90px;
+}
+
+/* =========================================================
+   SECTIONS
+   ========================================================= */
+
+.about-section {
+    margin-bottom: 50px;
+}
+
+.about-section:last-child {
+    margin-bottom: 0;
+}
+
+.about-section h2 {
+    margin: 0 0 22px;
+
+    font-size: 17px;
+    font-weight: 500;
+    line-height: 1.2;
+
+    color: var(--color-text);
+}
+
+/* =========================================================
+   BODY COPY
+   ========================================================= */
+
+.about-copy {
+    font-size: 17px;
+    font-weight: 300;
+    line-height: 1.42;
+
+    letter-spacing: 0;
+
+    color: var(--color-text);
+}
+
+/* =========================================================
+   ARTIST STATEMENT
+   ========================================================= */
+
+.about-artist-statement {
+    display: flow-root;
+}
+
+.about-artist-image {
+    float: right;
+
+    width: 280px;
+
+    margin: 0 0 14px 18px;
+}
+
+.about-artist-image img {
+    display: block;
+
+    width: 100%;
+    height: auto;
+}
+
+.about-artist-statement .about-copy {
+    font-size: 17px;
+    line-height: 1.42;
+}
+
+.about-artist-statement h2 {
+    margin: 0 0 22px;
+
+    font-size: 18px;
+    line-height: 1.2;
+}
+
+/* =========================================================
+   EXHIBITIONS
+   ========================================================= */
+
+.exhibition-list {
+    display: flex;
+    flex-direction: column;
+
+    gap: 18px;
+}
+
+.exhibition-item h3 {
+    margin: 0 0 3px;
+
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 1.3;
+
+    color: var(--color-text);
+}
+
+.exhibition-item p {
+    margin: 0;
+
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 1.4;
+
+    color: var(--color-text);
+}
+
+/* =========================================================
+   GROUP EXHIBITION LIST
+   ========================================================= */
+
+.group-exhibition-list {
+    display: flex;
+    flex-direction: column;
+
+    gap: 4px;
+}
+
+.group-exhibition-item {
+    margin: 0;
+
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 1.5;
+
+    color: var(--color-text);
+}
+
+/* =========================================================
+   MOBILE / TABLET
+   ========================================================= */
+
+@media (max-width: 1023px) {
+    .about-main {
+        padding-top: var(--mobile-page-top);
+        padding-bottom: 60px;
+    }
+
+    .about-section {
+        margin-bottom: 52px;
+    }
+
+    .about-section h2 {
+        margin-bottom: 20px;
+
+        font-size: 18px;
+    }
+
+    .about-copy {
+        font-size: 15px;
+        line-height: 1.6;
+    }
+
+    /* -----------------------------------------------------
+       Artist image
+       ----------------------------------------------------- */
+
+    .about-artist-statement {
+        display: block;
+    }
+
+    .about-artist-image {
+        float: none;
+        clear: both;
+
+        width: 100%;
+
+        margin: 0 0 28px;
+    }
+
+    .about-artist-image img {
+        display: block;
+
+        width: 100%;
+        height: auto;
+    }
+
+    .about-artist-statement .about-copy {
+        width: 100%;
+
+        font-size: 17px;
+        line-height: 1.5;
+    }
+
+    /* -----------------------------------------------------
+       Exhibitions
+       ----------------------------------------------------- */
+
+    .exhibition-list {
+        gap: 16px;
+    }
+
+    .group-exhibition-list {
+        gap: 4px;
+    }
+
+    .group-exhibition-item {
+        font-size: 15px;
+        line-height: 1.5;
+    }
+}

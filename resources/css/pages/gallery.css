@@ -1,0 +1,500 @@
+/* =========================================================
+   GALLERY PAGE
+
+   Contains:
+   - Gallery home
+   - Period gallery
+   - Conceptual Art gallery
+   - Artwork slider
+   - Notes
+   ========================================================= */
+
+/* =========================================================
+   SHARED GALLERY CONTENT
+   ========================================================= */
+
+.gallery-main {
+    padding: 90px 72px;
+}
+
+/* =========================================================
+   GALLERY HOME
+   ========================================================= */
+
+.gallery-home-main {
+    padding: 48px 0 70px;
+
+    text-align: center;
+}
+
+.gallery-home-main > h1 {
+    margin: 0 0 34px;
+
+    font-size: 28px;
+    font-weight: 300;
+    line-height: 1.2;
+
+    color: var(--color-text);
+}
+
+/* ---------------------------------------------------------
+   Featured artwork slider
+   --------------------------------------------------------- */
+
+.gallery-home-slider {
+    width: 100%;
+    height: 320px;
+    min-height: 0;
+
+    margin-bottom: 8px;
+
+    align-items: flex-start;
+}
+
+.gallery-home-slider .gallery-slider-items {
+    width: 100%;
+    height: 300px;
+
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.gallery-home-slider .gallery-slide {
+    display: none;
+
+    width: 100%;
+    height: 300px;
+
+    margin: 0;
+}
+
+.gallery-home-slider .gallery-slide.is-active {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.gallery-home-slider .gallery-slide img {
+    display: block;
+
+    width: auto;
+    max-width: 250px;
+    max-height: 300px;
+
+    margin: 0 auto;
+
+    object-fit: contain;
+}
+
+/* ---------------------------------------------------------
+   Home slider arrows
+   --------------------------------------------------------- */
+
+.gallery-home-slider .gallery-slider-arrow {
+    top: 44%;
+
+    width: auto;
+    height: auto;
+
+    font-size: 58px;
+    font-weight: 200;
+
+    color: #c9c9c9;
+}
+
+.gallery-home-slider .gallery-slider-prev {
+    left: 42px;
+}
+
+.gallery-home-slider .gallery-slider-next {
+    right: 42px;
+}
+
+.gallery-home-slider .gallery-slider-arrow:hover {
+    color: #8f8f8f;
+}
+
+/* ---------------------------------------------------------
+   Period links
+   --------------------------------------------------------- */
+
+.gallery-home-periods {
+    width: 132px;
+
+    margin: 0 auto;
+
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+.gallery-home-period-link {
+    display: block;
+
+    padding: 5px 0;
+
+    border-bottom: 1px solid #444444;
+
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 1.2;
+
+    color: var(--color-text);
+
+    white-space: nowrap;
+}
+
+.gallery-home-conceptual-link {
+    display: block;
+
+    padding-top: 7px;
+
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 1.2;
+
+    color: var(--color-text);
+
+    white-space: nowrap;
+}
+
+.gallery-home-period-link:hover,
+.gallery-home-conceptual-link:hover {
+    color: var(--color-accent);
+}
+
+/* =========================================================
+   PERIOD GALLERY
+   ========================================================= */
+
+.gallery-period-main {
+    padding: 70px 0 90px;
+}
+
+.gallery-period-main > h1 {
+    margin: 0 0 8px;
+
+    text-align: center;
+
+    font-size: 25px;
+    font-weight: 300;
+    line-height: 1.2;
+
+    color: var(--color-text);
+}
+
+.gallery-period-title {
+    margin: 0 0 80px;
+
+    text-align: center;
+
+    font-size: 23px;
+    font-weight: 300;
+    line-height: 1.2;
+
+    color: var(--color-text);
+}
+
+/* =========================================================
+   SHARED GALLERY SLIDER
+   ========================================================= */
+
+.gallery-slider {
+    position: relative;
+
+    width: 100%;
+    min-height: 430px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.gallery-slider-items {
+    width: 100%;
+}
+
+.gallery-slide {
+    display: none;
+
+    width: 100%;
+
+    margin: 0;
+
+    text-align: center;
+}
+
+.gallery-slide.is-active {
+    display: block;
+}
+
+.gallery-slide img {
+    display: block;
+
+    width: auto;
+    max-width: 82%;
+    max-height: 430px;
+
+    margin: 0 auto;
+
+    object-fit: contain;
+}
+
+/* ---------------------------------------------------------
+   Slider arrows
+   --------------------------------------------------------- */
+
+.gallery-slider-arrow {
+    position: absolute;
+
+    top: 50%;
+
+    width: 46px;
+    height: 46px;
+
+    padding: 0;
+
+    border: 0;
+    background: transparent;
+
+    transform: translateY(-50%);
+
+    font-size: 32px;
+    font-weight: 300;
+    line-height: 1;
+
+    color: var(--color-text);
+
+    cursor: pointer;
+
+    z-index: 2;
+}
+
+.gallery-slider-prev {
+    left: 18px;
+}
+
+.gallery-slider-next {
+    right: 18px;
+}
+
+.gallery-slider-arrow:hover {
+    color: var(--color-accent);
+}
+
+/* =========================================================
+   CONCEPTUAL ART / CATEGORY PAGE
+   ========================================================= */
+
+.gallery-category-main {
+    padding: 70px 0 90px;
+}
+
+.gallery-category-main > h1 {
+    margin: 0 0 8px;
+
+    text-align: center;
+
+    font-size: 25px;
+    font-weight: 300;
+    line-height: 1.2;
+
+    color: var(--color-text);
+}
+
+.gallery-category-title {
+    margin: 0 0 100px;
+
+    text-align: center;
+
+    font-size: 23px;
+    font-weight: 300;
+    line-height: 1.2;
+
+    color: var(--color-text);
+}
+
+/* ---------------------------------------------------------
+   Artwork list
+   --------------------------------------------------------- */
+
+.gallery-work-list {
+    display: flex;
+    flex-direction: column;
+
+    gap: 90px;
+}
+
+.gallery-work-item {
+    width: 100%;
+}
+
+.gallery-work-item h3 {
+    margin: 0 0 24px;
+
+    padding: 0;
+
+    text-align: center;
+
+    font-size: 27px;
+    font-weight: 700;
+    line-height: 1.2;
+
+    color: var(--color-text);
+}
+
+/* ---------------------------------------------------------
+   Artwork image
+   --------------------------------------------------------- */
+
+.gallery-work-image {
+    width: 100%;
+    max-width: none;
+
+    margin: 0;
+}
+
+.gallery-work-image img {
+    display: block;
+
+    width: 100%;
+    height: auto;
+
+    object-fit: contain;
+}
+
+/* ---------------------------------------------------------
+   Artwork note
+   --------------------------------------------------------- */
+
+.gallery-note-button {
+    display: block;
+
+    margin: 18px auto 0;
+    padding: 0;
+
+    border: 0;
+    background: transparent;
+
+    font-size: 13px;
+    font-weight: 400;
+
+    color: var(--color-text);
+
+    cursor: pointer;
+}
+
+.gallery-note-button:hover {
+    color: var(--color-accent);
+}
+
+.gallery-note {
+    display: none;
+
+    max-width: calc(100% - 80px);
+
+    margin: 20px auto 0;
+
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 1.55;
+
+    color: var(--color-text);
+}
+
+.gallery-note.is-open {
+    display: block;
+}
+
+/* =========================================================
+   MOBILE / TABLET
+   ========================================================= */
+
+@media (max-width: 1023px) {
+    /* -----------------------------------------------------
+       Shared gallery page spacing
+       ----------------------------------------------------- */
+
+    .gallery-home-main,
+    .gallery-period-main,
+    .gallery-category-main {
+        padding-top: var(--mobile-page-top);
+        padding-bottom: 60px;
+    }
+
+    /* -----------------------------------------------------
+       Gallery headings
+       ----------------------------------------------------- */
+
+    .gallery-home-main > h1,
+    .gallery-period-main > h1,
+    .gallery-category-main > h1 {
+        margin: 0 0 28px;
+
+        text-align: center;
+
+        font-size: 27px;
+        font-weight: 300;
+        line-height: 1.15;
+    }
+
+    /* -----------------------------------------------------
+       Category page
+       ----------------------------------------------------- */
+
+    .gallery-category-main {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .gallery-category-title {
+        margin-bottom: 70px;
+
+        font-size: 21px;
+    }
+
+    .gallery-work-list {
+        gap: 70px;
+    }
+
+    .gallery-work-item h3 {
+        padding: 0 var(--mobile-gutter);
+
+        margin-bottom: 20px;
+
+        font-size: 23px;
+    }
+
+    .gallery-work-image {
+        width: 100%;
+    }
+
+    .gallery-note-button {
+        margin-top: 18px;
+    }
+
+    .gallery-note {
+        max-width: none;
+
+        margin: 18px var(--mobile-gutter) 0;
+    }
+
+    /* -----------------------------------------------------
+       Period gallery
+       ----------------------------------------------------- */
+
+    .gallery-period-main {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    /* -----------------------------------------------------
+       Gallery home
+       ----------------------------------------------------- */
+
+    .gallery-home-main {
+        padding-left: 0;
+        padding-right: 0;
+    }
+}

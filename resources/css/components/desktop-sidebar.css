@@ -1,0 +1,221 @@
+/* =========================================================
+   DESKTOP SIDEBAR / NAVIGATION / FOOTER
+
+   Used by:
+   - Home
+   - Gallery
+   - About
+   - Press
+   - Review
+   - Awards
+   - Contact
+
+   Shared positioning should be changed here only.
+   ========================================================= */
+
+/* =========================================================
+   SIDEBAR ICON
+   ========================================================= */
+
+.sidebar-custom-icon {
+    width: var(--sidebar-icon-size);
+    height: var(--sidebar-icon-size);
+    margin-bottom: 14px;
+}
+
+.sidebar-custom-icon img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* =========================================================
+   DESKTOP ONLY
+   ========================================================= */
+
+@media (min-width: 1024px) {
+    /* -----------------------------------------------------
+       Inner-page sidebar containers
+       ----------------------------------------------------- */
+
+    :is(
+        .gallery-sidebar,
+        .about-sidebar,
+        .press-sidebar,
+        .reviews-sidebar,
+        .awards-sidebar,
+        .contact-sidebar
+    ) {
+        position: fixed;
+        top: 0;
+
+        width: var(--sidebar-width);
+        height: 100vh;
+        min-height: 100vh;
+
+        background: var(--color-background);
+        overflow: hidden;
+
+        z-index: 10;
+    }
+
+    /* -----------------------------------------------------
+       Main navigation
+       Same coordinates on every desktop page
+       ----------------------------------------------------- */
+
+    :is(
+        .home-nav,
+        .gallery-nav,
+        .about-nav,
+        .press-nav,
+        .reviews-nav,
+        .awards-nav,
+        .contact-nav
+    ) {
+        position: fixed;
+
+        left: var(--desktop-nav-left);
+        top: var(--desktop-nav-top);
+
+        margin: 0;
+
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+
+        z-index: var(--z-sidebar);
+    }
+
+    /* -----------------------------------------------------
+       Navigation links
+       ----------------------------------------------------- */
+
+    :is(
+            .home-nav,
+            .gallery-nav,
+            .about-nav,
+            .press-nav,
+            .reviews-nav,
+            .awards-nav,
+            .contact-nav
+        )
+        a {
+        margin: 0;
+        padding: 0;
+
+        font-size: var(--nav-font-size);
+        font-weight: 400;
+        line-height: var(--nav-line-height);
+
+        color: var(--color-text);
+        white-space: nowrap;
+    }
+
+    /* -----------------------------------------------------
+       Active / hover state
+       ----------------------------------------------------- */
+
+    :is(
+            .gallery-nav,
+            .about-nav,
+            .press-nav,
+            .reviews-nav,
+            .awards-nav,
+            .contact-nav
+        )
+        a.active {
+        color: var(--color-accent);
+    }
+
+    .home-nav a:hover {
+        color: var(--color-accent);
+    }
+
+    /* -----------------------------------------------------
+       Sidebar footer
+       Same coordinates on every desktop page
+       ----------------------------------------------------- */
+
+    :is(
+        .home-footer,
+        .gallery-sidebar-footer,
+        .about-sidebar-footer,
+        .press-sidebar-footer,
+        .reviews-sidebar-footer,
+        .awards-sidebar-footer,
+        .contact-sidebar-footer
+    ) {
+        position: fixed;
+
+        left: var(--desktop-nav-left);
+        bottom: var(--desktop-footer-bottom);
+
+        margin: 0;
+
+        z-index: var(--z-sidebar);
+    }
+
+    /* -----------------------------------------------------
+       Footer text
+       ----------------------------------------------------- */
+
+    :is(
+            .home-footer,
+            .gallery-sidebar-footer,
+            .about-sidebar-footer,
+            .press-sidebar-footer,
+            .reviews-sidebar-footer,
+            .awards-sidebar-footer,
+            .contact-sidebar-footer
+        )
+        p {
+        margin: 0;
+
+        font-size: var(--footer-font-size);
+        font-weight: 300;
+        line-height: var(--footer-line-height);
+
+        color: var(--color-muted);
+    }
+
+    /* -----------------------------------------------------
+       Contact Instagram icon
+       ----------------------------------------------------- */
+
+    .contact-sidebar-footer .instagram-link {
+        display: block;
+
+        width: var(--sidebar-icon-size);
+        height: var(--sidebar-icon-size);
+
+        margin-bottom: 14px;
+
+        color: var(--color-accent);
+    }
+}
+
+/* =========================================================
+   MOBILE / TABLET
+
+   Desktop sidebars are replaced by the global mobile menu.
+   ========================================================= */
+
+@media (max-width: 1023px) {
+    :is(
+        .gallery-sidebar,
+        .about-sidebar,
+        .press-sidebar,
+        .reviews-sidebar,
+        .awards-sidebar,
+        .contact-sidebar
+    ) {
+        display: none;
+    }
+
+    .home-nav,
+    .home-footer {
+        display: none;
+    }
+}

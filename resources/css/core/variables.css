@@ -1,0 +1,47 @@
+/* =========================================================
+   DESIGN TOKENS
+   Shared colours, dimensions, typography and spacing
+   ========================================================= */
+
+:root {
+    /* Colours */
+    --color-text: #231f20;
+    --color-muted: #4a4a4a;
+    --color-accent: #f21f2b;
+    --color-background: #ffffff;
+    --color-panel: #f1f1f2;
+    --color-border: #b7b7b7;
+    --color-placeholder: #dedede;
+
+    /* Typography */
+    --font-primary: "Barlow", sans-serif;
+
+    /* Desktop layout */
+    --site-canvas-width: 1200px;
+    --page-width: 960px;
+    --sidebar-width: 264px;
+    --content-width: 696px;
+
+    /* Shared desktop navigation */
+    --desktop-nav-left: calc(50% - 600px);
+    --desktop-nav-top: 35.5vh;
+    --desktop-footer-bottom: 8vh;
+
+    /* Navigation */
+    --nav-font-size: 18px;
+    --nav-line-height: 1.58;
+
+    /* Sidebar footer */
+    --sidebar-icon-size: 34px;
+    --footer-font-size: 12px;
+    --footer-line-height: 1.45;
+
+    /* Mobile */
+    --mobile-gutter: 24px;
+    --mobile-topbar-height: 92px;
+    --mobile-page-top: 80px;
+
+    /* Layering */
+    --z-sidebar: 100;
+    --z-mobile-menu: 9999;
+}

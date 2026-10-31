@@ -1,0 +1,103 @@
+/* =========================================================
+   AWARDS PAGE
+
+   Contains only Awards-specific styles.
+   Shared layout/sidebar/mobile navigation are defined
+   elsewhere.
+   ========================================================= */
+
+/* =========================================================
+   MAIN CONTENT
+   ========================================================= */
+
+.awards-main {
+    padding: 160px 80px 80px;
+}
+
+/* =========================================================
+   AWARDS LIST
+   ========================================================= */
+
+.awards-list {
+    display: flex;
+    flex-direction: column;
+    gap: 44px;
+}
+
+.award-item {
+    width: 100%;
+}
+
+/* =========================================================
+   AWARD IMAGE
+   ========================================================= */
+
+.award-image {
+    width: 100%;
+    margin-bottom: 18px;
+
+    overflow: hidden;
+}
+
+.award-image img {
+    display: block;
+    width: 100%;
+    height: auto;
+
+    object-fit: contain;
+}
+
+/* =========================================================
+   AWARD CONTENT
+   ========================================================= */
+
+.award-content {
+    width: 100%;
+}
+
+.award-item h2 {
+    margin: 0 0 7px;
+
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 1.2;
+
+    color: var(--color-text);
+}
+
+.award-item p {
+    margin: 0;
+
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 1.4;
+
+    color: var(--color-text);
+}
+
+/* =========================================================
+   MOBILE / TABLET
+   ========================================================= */
+
+@media (max-width: 1023px) {
+    .awards-main {
+        padding-top: var(--mobile-page-top);
+        padding-bottom: 48px;
+    }
+
+    .awards-list {
+        gap: 36px;
+    }
+
+    .award-image {
+        margin-bottom: 16px;
+    }
+
+    .award-item h2 {
+        font-size: 20px;
+    }
+
+    .award-item p {
+        font-size: 13px;
+    }
+}

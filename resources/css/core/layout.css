@@ -1,0 +1,137 @@
+/* =========================================================
+   SHARED INNER-PAGE LAYOUT
+
+   Used by:
+   - Gallery
+   - About
+   - Press
+   - Review
+   - Awards
+   - Contact
+   ========================================================= */
+
+/* =========================================================
+   DESKTOP
+   ========================================================= */
+
+@media (min-width: 1024px) {
+    /* -----------------------------------------------------
+       Page shell
+       ----------------------------------------------------- */
+
+    :is(
+        .gallery-page,
+        .about-page,
+        .press-page,
+        .reviews-page,
+        .awards-page,
+        .contact-page
+    ) {
+        width: var(--page-width);
+        min-height: 100vh;
+
+        margin: 0 auto;
+
+        position: relative;
+
+        background: var(--color-background);
+    }
+
+    /* -----------------------------------------------------
+       Main content panel
+       ----------------------------------------------------- */
+
+    :is(
+        .gallery-main,
+        .about-main,
+        .press-main,
+        .reviews-main,
+        .awards-main,
+        .contact-main
+    ) {
+        width: var(--content-width);
+        min-height: 100vh;
+
+        margin-left: var(--sidebar-width);
+
+        background: var(--color-panel);
+    }
+
+    /* -----------------------------------------------------
+       Scroll behaviour for content-heavy pages
+       ----------------------------------------------------- */
+
+    html:has(.gallery-page),
+    body:has(.gallery-page),
+    html:has(.about-page),
+    body:has(.about-page),
+    html:has(.press-page),
+    body:has(.press-page),
+    html:has(.reviews-page),
+    body:has(.reviews-page),
+    html:has(.awards-page),
+    body:has(.awards-page) {
+        height: auto;
+        overflow-y: auto;
+    }
+}
+
+/* =========================================================
+   MOBILE / TABLET
+   ========================================================= */
+
+@media (max-width: 1023px) {
+    html,
+    body {
+        width: 100%;
+        height: auto;
+
+        overflow-x: hidden;
+        overflow-y: auto;
+    }
+
+    /* -----------------------------------------------------
+       Page shell
+       ----------------------------------------------------- */
+
+    :is(
+        .gallery-page,
+        .about-page,
+        .press-page,
+        .reviews-page,
+        .awards-page,
+        .contact-page
+    ) {
+        width: 100%;
+        min-height: 100vh;
+
+        margin: 0;
+
+        display: block;
+
+        background: var(--color-panel);
+    }
+
+    /* -----------------------------------------------------
+       Main content panel
+       ----------------------------------------------------- */
+
+    :is(
+        .gallery-main,
+        .about-main,
+        .press-main,
+        .reviews-main,
+        .awards-main,
+        .contact-main
+    ) {
+        width: 100%;
+        min-height: 100vh;
+
+        margin: 0;
+
+        padding-left: var(--mobile-gutter);
+        padding-right: var(--mobile-gutter);
+
+        background: var(--color-panel);
+    }
+}
